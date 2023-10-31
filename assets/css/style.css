@@ -117,32 +117,36 @@ section#signup_page .container .page_wrapper .right_side {
 
 
 /*success message style*/
-section#signup_page .alert_page {
+.alert_page {
   display: none;
-  flex-direction: column;
-  max-width: 340px;
-  padding: 35px;
-  background: white;
-  border-radius: 10px;
-  box-sizing: border-box;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: var(--main_bg_color);
+ 
 }
-
-section#signup_page .alert_page .success_icon img {
+.alert_page .alert_wrapper {
+  max-width: 340px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: white;
+  padding: 35px;
+}
+.alert_page .success_icon img {
   width: 20%;
   margin-bottom: 15px;
 }
 
-section#signup_page .alert_page .success_info h2 {
+ .alert_page .success_info h2 {
   font-size: 41px;
 }
-
-section#signup_page .alert_page .success_info p {
+ .alert_page .success_info p {
   font-size: 12px;
   margin: 10px 0px;
   line-height: 1.4rem;
 }
 
-section#signup_page .alert_page .dismiss_btn button#dismiss_btn {
+ .alert_page .dismiss_btn button#dismiss_btn {
   width: 100%;
   padding: 13px 0px;
   font-size: 14px;
@@ -155,11 +159,13 @@ section#signup_page .alert_page .dismiss_btn button#dismiss_btn {
   transition: .4s;
 }
 
-section#signup_page .alert_page .dismiss_btn button#dismiss_btn:hover {
+ .alert_page .dismiss_btn button#dismiss_btn:hover {
   background: linear-gradient(45deg, var(--color_one),var(--color_two));
   transition: .4s;
 }
-
+ .container .page_wrapper .left_side .img_mobile{
+  display: none;
+}
 
 
 /* responsive code  here */
@@ -169,9 +175,7 @@ section#signup_page .alert_page .dismiss_btn button#dismiss_btn:hover {
   section#signup_page .container .page_wrapper .right_side .single_info_box .box_title h1{
     font-size: 40px;
   }
-  /* section#signup_page{
-    height: auto;
-  } */
+ 
   section#signup_page .container{
     margin: 50px 0;
   }
@@ -184,9 +188,28 @@ section#signup_page .alert_page .dismiss_btn button#dismiss_btn:hover {
     padding: 15px;
     box-sizing: border-box;
     margin-bottom: 30px;
+    order: 2;
+  }
+  section#signup_page .container .page_wrapper .left_side .signup_img{
+    border-radius: 20px;
+    overflow: hidden;
   }
   section#signup_page .container .page_wrapper .left_side{
     width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+
   }
-  
+  section#signup_page .container .page_wrapper .left_side .img_desktop{
+    display: none;
+  }
+  section#signup_page .container .page_wrapper .left_side .img_mobile{
+    display: unset;
+  }
+  .alert_page{
+    background: white;
+  }
+  .alert_page .success_info{
+    margin-bottom: 150px;
+  }
 }

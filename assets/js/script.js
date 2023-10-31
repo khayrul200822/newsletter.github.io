@@ -1,6 +1,6 @@
 
 //get elements
-const singinPage = document.querySelector(".container");
+const singinPage = document.querySelector("#signup_page");
 const emailInput = document.getElementById("email");
 const submitBtn = document.getElementById("submitButton");
 const alertMsg = document.querySelector(".email_labels span");
@@ -11,17 +11,17 @@ const dismissBtn = document.getElementById("dismiss_btn");
 
 // add addEventListener
 submitBtn.addEventListener("click", emailHandler);
-
 dismissBtn.addEventListener("click", () =>{
-    singinPage.style.display = "unset";
+    singinPage.style.display = "flex";
     alertPage.style.display = "none";
 })
+
 
 //function for email validation
 function emailHandler() {
     let emailValue = emailInput.textContent;
     emailValue = emailInput.value;
-    if (emailValue.includes("@gmail.com")) {
+    if (emailValue.includes("@gmail.com") && emailValue.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         singinPage.style.display = "none";
         alertPage.style.display = "flex";
         alertMsg.style.display = "none";
