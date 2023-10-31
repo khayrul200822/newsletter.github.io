@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+ --main_bg_color: #36384D;
+ --color_one: #FF5478;
+ --color_two: #FF693E;
+}
+
+section#signup_page {
+  background: var(--main_bg_color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#signup_page .container{
+  background-color: white;
+  padding: 15px;
+  min-width: 60%;
+  border-radius: 20px;
+  margin: auto;
+}
+section#signup_page .container .page_wrapper .right_side .single_info_box .box_title{
+  color: var(--main_bg_color);
+}
+section#signup_page .container .page_wrapper {display: flex;align-items: center;justify-content: space-between;}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box .box_title h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box .box_title p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box ul.item_list {
+    margin: 0px 0px 30px 30px;
+}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box ul.item_list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    list-style-image: url(../images/icon-list.svg);
+    font-weight: 400;
+}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box {
+    display: flex;
+    flex-direction: column;
+}section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box .email_labels{
+  display: flex;
+  justify-content: space-between;
+}
+section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box label{
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--main_bg_color);
+  font-weight: bold;
+}
+section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box span{
+  font-size: 14px;
+  color: red;
+  display: none;
+  transition: .4s;
+}
+section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box input {
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #999;
+    transition: .2s;
+}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box button {
+    margin: 20px 0px;
+    margin-bottom: 0px;
+    padding: 15px;
+    font-size: 14px;
+    background: var(--main_bg_color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: .6s;
+}
+
+section#signup_page .container .page_wrapper .right_side .single_info_box .mail_box button:hover {
+    background: linear-gradient(45deg, var(--color_one), var(--color_two));
+    transition: .6s;
+}
+
+section#signup_page .container .page_wrapper .left_side .signup_img img {
+    width: 100%;
+}
+
+section#signup_page .container .page_wrapper .left_side {
+    width: 40%;
+}
+
+section#signup_page .container .page_wrapper .right_side {
+    width: 50%;
+    padding-left: 30px;
+}
+
+
+
+/*success message style*/
+section#signup_page .alert_page {
+  display: none;
+  flex-direction: column;
+  max-width: 340px;
+  padding: 35px;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+section#signup_page .alert_page .success_icon img {
+  width: 20%;
+  margin-bottom: 15px;
+}
+
+section#signup_page .alert_page .success_info h2 {
+  font-size: 41px;
+}
+
+section#signup_page .alert_page .success_info p {
+  font-size: 12px;
+  margin: 10px 0px;
+  line-height: 1.4rem;
+}
+
+section#signup_page .alert_page .dismiss_btn button#dismiss_btn {
+  width: 100%;
+  padding: 13px 0px;
+  font-size: 14px;
+  color: white;
+  background: var(--main_bg_color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: .4s;
+}
+
+section#signup_page .alert_page .dismiss_btn button#dismiss_btn:hover {
+  background: linear-gradient(45deg, var(--color_one),var(--color_two));
+  transition: .4s;
+}
+
+
+
+/* responsive code  here */
+@media only screen and (max-width: 668px) {
+  
+
+  section#signup_page .container .page_wrapper .right_side .single_info_box .box_title h1{
+    font-size: 40px;
+  }
+  /* section#signup_page{
+    height: auto;
+  } */
+  section#signup_page .container{
+    margin: 50px 0;
+  }
+  section#signup_page .container .page_wrapper{
+    flex-direction: column;
+  }
+  section#signup_page .container .page_wrapper .right_side{
+    padding-left: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  section#signup_page .container .page_wrapper .left_side{
+    width: 100%;
+  }
+  
+}
